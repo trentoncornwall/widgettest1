@@ -1,0 +1,9 @@
+<html>
+  <body>
+    <script
+      id="otwidget"
+      src="//www.opentable.com/widget/reservation/loader?rid=260977&amp;amp;type=standard&amp;amp;theme=standard&amp;amp;iframe=false&amp;amp;domain=com&amp;amp;lang=en-US&amp;amp;newtab=false&amp;amp;ot_source=testsrcutm_testmedutm&amp;amp;ot_campaign=testsplit-js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>;
