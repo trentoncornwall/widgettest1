@@ -1,9 +1,26 @@
 <html>
-  <body>
+  <head>
     <script
-      type="text/javascript"
-      src="//www.opentable.com/widget/reservation/loader?rid=260977&type=standard&theme=standard&iframe=false&domain=com&lang=en-US&newtab=false&ot_source=Source%20TrentonSite&ot_campaign=Campaign%20TrentonSite"
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
     ></script>
+  </head>
+  <body>
+    <div class="widget"></div>
+    <script>
+      let getPerams = async () => window.location.href.split("?")[1];
+
+      getPerams().then((perams) => {
+        const sourceCampaign = perams ? "&" + perams : "";
+        const url = `//www.opentable.com/widget/reservation/loader?rid=260977&type=standard&theme=standard&iframe=false&domain=com&lang=en-US&newtab=true${sourceCampaign}`;
+
+        const script = document.createElement("script");
+        $(".widget").append(script);
+        script.type = "text/javascript";
+        script.src = url;
+        console.log(script);
+      });
+    </script>
   </body>
 </html>
-;
